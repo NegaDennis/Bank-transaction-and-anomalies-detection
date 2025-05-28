@@ -1,7 +1,7 @@
 # Bank-transaction-and-anomalies-detection
 
 
-It's a work in progress!!!
+It's a work in progress!!! The codes and analysis file are done. Can be accessed directly from 'codes' folder in this repo. Will continue to populate the missing parts of this README next.
 
 ## Data understanding
 
