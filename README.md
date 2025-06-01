@@ -1,7 +1,7 @@
 # Bank-transaction-and-anomalies-detection
 
 
-It's a work in progress!!! The codes and analysis file are done. Can be accessed directly from 'codes' folder in this repo. Will continue to populate the missing parts of this README next.
+It's a work in progress!!! Almost done. Just need to furnish this README with images and some EDA highlight next. Read v3 code file in 'code' folder for latest version.
 
 ## Data understanding
 
@@ -30,9 +30,29 @@ At the end of the project, the goals include:
 3. Codes are well-documented and pythonic.
 
 
+## Model development process
+
+A clustering model was developed using KNN method. The model utilized the sklearn library.
+
+The variables included in the model are TransactionDurations and TransactionAmount. Both was directed through a standard scaler from the sklearn library before model fitting. By observing interia/k-number trade-off and the elbow method, k=3 was found to be the optimal number of neighbors and was used for the model.
+
+
 ## Result
-...
-## Conclusions
-...
-## Limitations
-...
+The model was successful at producing a map with 3 clusters. The clusters could be described as below:
+- Cluster 0: it includes transactions that are low in dollar amount and takes less time to transact.
+- Cluster 1: Despite higher transaction duration, the members of this cluster deals mostly in small dollar amounts.
+- Cluster 2: Members tend to take longer time to transact and deals in higher dollar amounts.
+
+After calculating distance and threshold, the model detected 126 anomalies in the dataset with abnormally long durations and high transaction amounts.
+
+
+## Conclusions and limitations
+The model satisfied the purpose of the project, making interpretable detections of anomalies within the dataset.
+
+There are rooms for improvement for future model development attempt. Here are a few ways to build up on this project's outcomes:
+- Try different types of model to detect anomalies. This includes DBSCAN, Hierarchical Clustering, Spectral Clustering, and more.
+- Adding more features to the model. (This will, however, increase model complexity and trade off interpretability)
+- Perform further data manipulation to engineer new features.
+- Fit the model on more data.
+
+For future projects, one of more options will be employed to seek better performance.
