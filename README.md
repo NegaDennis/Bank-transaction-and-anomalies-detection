@@ -1,7 +1,7 @@
 # Bank-transaction-and-anomalies-detection
 
 
-It's a work in progress!!! Almost done. Just need to furnish this README with images and some EDA highlight next. Read v3 code file in 'code' folder for latest version.
+Full Analyis files can be found in the 'code' folder of this repository.
 
 ## Data understanding
 
@@ -38,16 +38,25 @@ The variables included in the model are TransactionDurations and TransactionAmou
 
 
 ## Result
-The model was successful at producing a map with 3 clusters. The clusters could be described as below:
+Some interesting insights were observed from the EDA stage. Some of the highlights include:
+- Monday is the most busy day in term of transactions traffic for the bank:
+  ![1](https://github.com/user-attachments/assets/97866956-11e8-4d37-adf8-41ffd33e27b6)
+  
+- Most transactions take between 50 seconds and 150 seconds:
+  ![2](https://github.com/user-attachments/assets/7c4e21d8-962f-47d0-9d44-47d9c5e909c5)
+  
+ML modelling on the dataset was a success. The model was successful at producing a map with 3 clusters. The clusters could be described as below:
 - Cluster 0: it includes transactions that are low in dollar amount and takes less time to transact.
 - Cluster 1: Despite higher transaction duration, the members of this cluster deals mostly in small dollar amounts.
 - Cluster 2: Members tend to take longer time to transact and deals in higher dollar amounts.
+![3](https://github.com/user-attachments/assets/c7bb0412-a98e-4921-87c1-5fcb5d8af7f6)
 
 After calculating distance and threshold, the model detected 126 anomalies in the dataset with abnormally long durations and high transaction amounts.
+![4](https://github.com/user-attachments/assets/d12ae3f3-7ae0-4eb1-af12-d7de654f69bf)
 
 
 ## Conclusions and limitations
-The model satisfied the purpose of the project, making interpretable detections of anomalies within the dataset.
+The model satisfied the purpose of the project, making interpretable detections of anomalies within the dataset. The model also have potential to scale with number entries and number of features to include.
 
 There are rooms for improvement for future model development attempt. Here are a few ways to build up on this project's outcomes:
 - Try different types of model to detect anomalies. This includes DBSCAN, Hierarchical Clustering, Spectral Clustering, and more.
